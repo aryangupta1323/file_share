@@ -1,7 +1,7 @@
 :root {
-    --main-bg-color: #edf5fe;
-    --light-blue: #D4ECDD;
-    --dark-blue: green;
+    --main-bg-color: #D4ECDD;
+    --light-blue: green;
+    --dark-blue: rgb(28, 92, 2);
   }
 
   body {
