@@ -1,14 +1,21 @@
 const express=require("express");
 const path=require("path")
-const bodyParser=require("body-parser")
+const cors = require('cors');
 const PORT = process.env.PORT || 3000;
-const app=express();
+const app=express()
+
 app.use(express.json())
-app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static('public'))
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
+
+// Cors
+const corsOptions = {
+  origin: process.env.ALLOWED_CLIENTS.split(',')
+  // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
+}
+app.use(cors(corsOptions))
 app.use("/api/files",require("./routers/files"))
 app.use("/files",require("./routers/show"))
 app.use("/files/download",require("./routers/download"))
