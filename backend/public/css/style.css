@@ -1,6 +1,6 @@
 :root {
     --main-bg-color: #edf5fe;
-    --light-blue: #03a9f4;
+    --light-blue:  #D4ECDD;
     --dark-blue: #028bca;
   }
 
@@ -19,7 +19,7 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 150px;
+    font-size: 3rem;
   }
 section.download {
     background: #fff;
