@@ -1,3 +1,4 @@
+const toggle=document.querySelector("input[type=checkbox]")
 console.log(toggle);
 toggle.addEventListener("change",changetheme);
 function changetheme(event){
