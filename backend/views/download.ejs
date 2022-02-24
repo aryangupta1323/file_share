@@ -11,23 +11,12 @@
 </head>
 
 <body>
-<div class="theme-switch-wrapper">
-      <span id="toggle-icon">
-          <span class="toggle-text">Light Mode</span>
-          <i class="fas fa-sun toggle-fa"></i>
-      </span>
-      <label class="theme-switch">
-          <input type="checkbox">
-          <div class="slider round"></div>
-      </label>
-    </div>
     <section class="download">
         <i class="fas fa-cloud-upload-alt " style="font-size:2.5rem;"></i>
         <% if(locals.error){ %>
         <h4><%= locals.error %> 😏</h4>
         <% } else { %>
         <h2>Your file is ready to download</h2>
-        <p>Link expires in 24 hours</p>
         <div class="download__meta">
             <h4><%= fileName %></h4>
             <small><%= parseInt(fileSize/1000) %> KB</small>
@@ -39,7 +28,6 @@
     </section>
 
     <!-- github fork button -->
-    <script src="./javascript/script.js">
 </body>
 
 </html>
